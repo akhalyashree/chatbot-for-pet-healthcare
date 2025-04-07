@@ -1,54 +1,166 @@
- [
+{
+  "intents": [
     {
-        "tag": "greeting",
-        "patterns": ["Hi", "How are you"],
-        "responses": ["Hi How can I assist you?", "I am fine how can I assist you?"]
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Hello",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "Greetings",
+        "What's up?",
+        "Is anyone there?",
+        "Hello chatbot"
+      ],
+      "responses": [
+        "Hello!",
+        "Hi there!",
+        "Hey!",
+        "Greetings!",
+        "Hello, how can I help you today?",
+        "Hi, what can I do for your pet?"
+      ]
     },
     {
-        "tag":"greeting",
-        "patterns":["Hello"],
-        "responses":["Hello how can i assist you?"]
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Talk to you later",
+        "I'm leaving",
+        "Have a good day",
+        "Farewell"
+      ],
+      "responses": [
+        "Goodbye!",
+        "See you later!",
+        "Have a great day!",
+        "Take care!",
+        "Bye, feel free to reach out again if you need anything."
+      ]
     },
     {
-        "tag": "goodbye",
-        "patterns": ["Bye", "See you later", "Goodbye", "Take care"],
-        "responses": ["Goodbye", "See you later", "Take care"]
+      "tag": "pet_health_query",
+      "patterns": [
+        "My dog is [symptom]",
+        "My cat has [symptom]",
+        "What should I do if my [pet_type] is [symptom]?",
+        "I'm worried about my [pet_type]'s [body_part]",
+        "What are the signs of [condition] in [pet_type]?",
+        "My [pet_type] is acting [behavior]",
+        "Could this be [possible_condition]?",
+        "What to do for [problem] in [pet_type]?",
+        "Is [symptom] serious for my [pet_type]?"
+      ],
+      "responses": [
+        "I understand you're concerned about your {pet_type}'s {symptom}. While I can offer some general information, it's best to consult with a veterinarian for a proper diagnosis and treatment plan. Could you tell me more about the symptom?",
+        "It sounds like your {pet_type} might be experiencing {symptom}. It's important to get professional advice. Have you noticed any other symptoms?",
+        "For any health concerns, especially {symptom}, it's always recommended to seek guidance from a qualified vet. They can assess your {pet_type}'s specific situation.",
+        "Many things can cause {symptom} in {pet_type}s. To get accurate advice, please schedule a visit with your veterinarian.",
+        "It's difficult to say for sure what's going on with your {pet_type} based on just {symptom}. A vet will be able to provide the most accurate assessment."
+      ]
     },
     {
-        "tag": "thanks",
-        "patterns": ["Thank you", "Thanks", "Thanks a lot", "I appreciate it"],
-        "responses": ["You're welcome", "No problem", "Glad I could help"]
+      "tag": "vaccination_info",
+      "patterns": [
+        "What vaccinations does my [pet_type] need?",
+        "When should my [pet_type] get vaccinated?",
+        "What are the core vaccines for [pet_type]?",
+        "Tell me about [vaccine_name] for [pet_type]",
+        "Vaccination schedule for a [age] [pet_type]",
+        "Are vaccinations important for pets?",
+        "What are the risks of not vaccinating my pet?"
+      ],
+      "responses": [
+        "Vaccination needs vary depending on your {pet_type}'s age, lifestyle, and location. It's best to discuss a vaccination schedule with your veterinarian.",
+        "Core vaccinations are generally recommended for all {pet_type}s. Your vet can provide specific recommendations based on your pet's needs.",
+        "Vaccinations are crucial for protecting your {pet_type} from serious and potentially fatal diseases. Please consult with your vet for the appropriate schedule.",
+        "The [vaccine_name] vaccine protects against [disease]. Your veterinarian can provide more detailed information about it.",
+        "A typical vaccination schedule for a young {pet_type} includes...",
+        "Yes, vaccinations are vital for your pet's health and the prevention of contagious diseases."
+      ]
     },
     {
-        "tag": "about",
-        "patterns": ["What can you do", "Who are you", "What are you", "What is your purpose"],
-        "responses": ["I am a chatbot", "My purpose is to assist you", "I can answer questions and provide assistance"]
+      "tag": "feeding_advice",
+      "patterns": [
+        "How much should I feed my [pet_type]?",
+        "What is the best food for my [pet_type]?",
+        "My [pet_type] is not eating",
+        "Can [pet_type] eat [food_item]?",
+        "What are the signs of food allergies in [pet_type]?",
+        "Feeding guidelines for a [age] [pet_type]",
+        "Should I give my [pet_type] treats?"
+      ],
+      "responses": [
+        "The amount of food your {pet_type} needs depends on their age, weight, breed, and activity level. Consult the feeding guidelines on your pet food and your veterinarian for personalized advice.",
+        "The best food for your {pet_type} depends on several factors. Your vet can recommend a suitable diet based on their individual needs.",
+        "If your {pet_type} is not eating, it's important to consult with a veterinarian to rule out any underlying health issues.",
+        "It's best to check with your veterinarian before giving your {pet_type} any new food items, as some human foods can be harmful to them.",
+        "Signs of food allergies in {pet_type}s can include...",
+        "Feeding guidelines for a [age] {pet_type} generally suggest...",
+        "Treats can be given in moderation as part of a balanced diet. Consult your vet for healthy treat options."
+      ]
     },
     {
-        "tag": "help",
-        "patterns": ["Help", "I need help", "Can you help me", "What should I do"],
-        "responses": ["Sure, what do you need help with?", "I'm here to help. What's the problem?", "How can I assist you?"]
+      "tag": "emergency",
+      "patterns": [
+        "My pet is [emergency_situation]",
+        "I think my pet has been poisoned",
+        "My pet is having trouble breathing",
+        "My pet is bleeding heavily",
+        "What to do in case of a pet emergency?",
+        "Where is the nearest emergency vet?",
+        "My pet collapsed"
+      ],
+      "responses": [
+        "This sounds like an emergency! Please seek immediate veterinary care. If you know the nearest emergency vet clinic, go there right away.",
+        "If you suspect your pet has been poisoned, contact your veterinarian or the Pet Poison Helpline immediately!",
+        "Difficulty breathing is a serious emergency. Please take your pet to the nearest emergency veterinary clinic immediately.",
+        "Heavy bleeding requires immediate veterinary attention. Apply pressure to the wound while transporting your pet to the nearest emergency vet.",
+        "In case of a pet emergency, stay calm and contact your veterinarian or the nearest emergency animal hospital immediately.",
+        "I cannot provide real-time location information for emergency vets. Please search online for 'emergency vet near me' or contact your regular vet for their emergency protocols."
+      ]
     },
     {
-        "tag": "age",
-        "patterns": ["How old are you", "What's your age"],
-        "responses": ["I don't have an age. I'm a chatbot.", "I was just born in the digital world.", "Age is just a number for me."]
+      "tag": "appointment_scheduling",
+      "patterns": [
+        "How do I book an appointment?",
+        "Can I schedule a visit?",
+        "I want to make an appointment for my [pet_type]",
+        "When are you available for appointments?",
+        "Reschedule my appointment",
+        "Cancel my appointment"
+      ],
+      "responses": [
+        "To schedule an appointment, please contact our clinic directly at [phone number] or visit our website at [website address].",
+        "Yes, you can schedule a visit. Please call us at [phone number] to arrange a suitable time.",
+        "To book an appointment for your {pet_type}, please provide us with your pet's name, the reason for the visit, and your preferred date and time.",
+        "Our appointment availability varies. Please contact us to check our schedule.",
+        "To reschedule or cancel your appointment, please call us at [phone number] as soon as possible.",
+        "You can book an appointment through our website at [website address] or by calling us at [phone number]."
+      ]
     },
     {
-        "tag": "weather",
-        "patterns": ["What's the weather like", "How's the weather today"],
-        "responses": ["I'm sorry, I cannot provide real-time weather information.", "You can check the weather on a weather app or website."]
-    },
-    {
-        "tag": "budget",
-        "patterns": ["How can I make a budget", "What's a good budgeting strategy", "How do I create a budget"],
-        "responses": ["To make a budget, start by tracking your income and expenses. Then, allocate your income towards essential expenses like rent, food, and bills. Next, allocate some of your income towards savings and debt repayment. Finally, allocate the remainder of your income towards discretionary expenses like entertainment and hobbies.", "A good budgeting strategy is to use the 50/30/20 rule. This means allocating 50% of your income towards essential expenses, 30% towards discretionary expenses, and 20% towards savings and debt repayment.", "To create a budget, start by setting financial goals for yourself. Then, track your income and expenses for a few months to get a sense of where your money is going. Next, create a budget by allocating your income towards essential expenses, savings and debt repayment, and discretionary expenses."]
-    },
-    {
-        "tag": "credit_score",
-        "patterns": ["What is a credit score", "How do I check my credit score", "How can I improve my credit score"],
-        "responses": ["A credit score is a number that represents your creditworthiness. It is based on your credit history and is used by lenders to determine whether or not to lend you money. The higher your credit score, the more likely you are to be approved for credit.", "You can check your credit score for free on several websites such as Credit Karma and Credit Sesame."]
+      "tag": "general_pet_care",
+      "patterns": [
+        "How to care for a [pet_type]?",
+        "What do [pet_type]s need?",
+        "Tips for [pet_type] care",
+        "How often should I groom my [pet_type]?",
+        "Exercise needs for a [pet_type]",
+        "How to train a [pet_type]?"
+      ],
+      "responses": [
+        "General care for a {pet_type} includes providing a balanced diet, regular exercise, grooming, and routine veterinary check-ups.",
+        "{pet_type}s need proper nutrition, fresh water, shelter, exercise, mental stimulation, and regular veterinary care.",
+        "Here are some general tips for {pet_type} care...",
+        "The frequency of grooming depends on your {pet_type}'s breed and coat type. Generally...",
+        "The exercise needs of a {pet_type} vary by breed, age, and health. Consult resources specific to your pet's breed.",
+        "Training methods for {pet_type} can vary. Positive reinforcement techniques are often effective. Consider consulting a professional trainer for specific guidance."
+      ]
     }
-]
-  
-  
+  ]
+}
