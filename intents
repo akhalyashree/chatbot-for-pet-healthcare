@@ -1,0 +1,51 @@
+
+[
+  {
+    "intent": "greeting",
+    "examples": [
+      "Hi", "Hey", "Hello", "Good morning", "Good afternoon", "Good evening", "Greetings", "What's up?", "Is anyone there?", "Hello chatbot"
+    ],
+    "responses": [
+      "Hello!", "Hi there!", "Hey!", "Greetings!", "Hello, how can I help you with your pet's health today?", "Hi, what pet care questions do you have based on PetMD?"
+    ]
+  },
+  {
+    "intent": "goodbye",
+    "examples": [
+      "Bye", "Goodbye", "See you later", "Talk to you later", "I'm leaving", "Have a good day", "Farewell"
+    ],
+    "responses": [
+      "Goodbye!", "See you later!", "Have a great day!", "Take care!", "Bye, feel free to reach out again if you need any pet health information from PetMD."
+    ]
+  },
+  {
+    "intent": "general_pet_care",
+    "examples": [
+      "How to care for a [pet_type]?", "What are the basics of [pet_type] care?", "Tell me about [pet_type] care", "What does a [pet_type] need?", "Tips for [pet_type] care", "How to look after my [pet_type]?"
+    ],
+    "responses": [
+      "General care for a {pet_type} involves understanding their specific needs. PetMD provides information on breeds, puppies/kittens, adult and senior care. What specific aspect of {pet_type} care are you interested in?",
+      "The basic needs of a {pet_type} include proper nutrition, fresh water, a safe environment, and veterinary care. PetMD has articles on these topics. What else would you like to know?",
+      "Caring for a {pet_type} can be rewarding! PetMD has resources on diet, health, and behavior. What are you curious about?",
+      "Looking after your {pet_type} well ensures their health and happiness. PetMD covers...",
+      "Here are some general tips for {pet_type} care based on PetMD..."
+    ]
+  },
+  {
+    "intent": "feeding_nutrition",
+    "examples": [
+      "What should I feed my [pet_type]?", "Best food for a [age] [pet_type]?", "How much to feed a [weight] [pet_type]?", "Nutritional needs of a [pet_type]?", "Is [food_item] safe for my [pet_type]?", "What are the signs of a food allergy in [pet_type]?", "Treats for [pet_type]?", "Diet for a [pet_type] with [condition]?"
+    ],
+    "responses": [
+      "The ideal diet for your {pet_type} depends on their age, breed, and health. PetMD offers information on food and diet. It's always best to consult with your veterinarian.",
+      "For a {age} {pet_type}, it's important to choose a food formulated for their life stage. PetMD has articles on puppy/kitten, adult, and senior care.",
+      "Feeding amounts for a {weight} {pet_type} vary. Check the food packaging guidelines and consult your vet. PetMD may have general guidelines.",
+      "Proper nutrition is vital for a {pet_type}'s health. PetMD provides information on this. What specific nutritional questions do you have?",
+      "It's important to check if [food_item] is safe for your {pet_type}. PetMD may have information on food safety and poisoning.",
+      "Signs of a food allergy in {pet_type}s can include... Consult PetMD or your veterinarian for more details.",
+      "Treats can be part of a healthy diet in moderation. Choose healthy options. PetMD may have some recommendations.",
+      "A {pet_type} with [condition] may have specific dietary needs. Your veterinarian is the best resource for this. PetMD might have some general information."
+    ]
+  }
+
+]
